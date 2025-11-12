@@ -1,0 +1,151 @@
+/* src/components/RelatorioPage.css */
+
+/* Removemos .page-container, .main-content e .sidebar daqui */
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.header-buttons .btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 12px;
+}
+
+.btn-secondary {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.btn-primary {
+  background-color: #0052cc;
+  color: white;
+}
+
+/* --- Caixa de Aviso --- */
+.warning-box {
+  display: flex;
+  align-items: center;
+  background-color: #fffbe6; /* Fundo amarelo claro */
+  border: 1px solid #ffe58f; /* Borda amarela */
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  color: #594300;
+}
+
+.warning-box svg {
+  margin-right: 12px;
+  color: #faad14; /* Ícone amarelo */
+}
+
+/* --- Seção de Resumo --- */
+.summary-section {
+  margin-bottom: 24px;
+}
+
+.summary-section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.summary-cards .card {
+  padding: 20px;
+  text-align: left;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.card-identified p {
+  color: #d93025; /* Vermelho para o item "identificado" */
+  font-weight: 700;
+}
+
+/* --- Seção de Dados e Rascunho --- */
+.data-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas de tamanho igual */
+  gap: 24px;
+}
+
+.data-visualization h3,
+.draft-laudo h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}
+
+/* --- Placeholder do Gráfico --- */
+.chart-placeholder {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Substitua pela regra abaixo: */
+.chart-placeholder img {
+  max-width: 100%;  /* 1. Não deixa a imagem ser MAIOR que o quadro */
+  height: auto;     /* 2. Mantém a proporção correta */
+  display: block;   /* 3. Remove espaços extras */
+  margin: 0 auto; /* 4. CENTRA a imagem se ela for MENOR que o quadro */
+}
+
+/* --- Rascunho do Laudo --- */
+.editor-toolbar {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.editor-toolbar button {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editor-toolbar button:hover {
+  background: #eee;
+}
+
+.editor-content {
+  min-height: 200px; /* Altura mínima para o texto */
+  font-family: 'Times New Roman', Times, serif; /* Fonte serifada para o laudo */
+  line-height: 1.6;
+  color: #333;
+}
